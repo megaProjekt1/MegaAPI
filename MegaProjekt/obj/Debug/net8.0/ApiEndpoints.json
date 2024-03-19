@@ -1,18 +1,50 @@
 [
   {
-    "ContainingType": "MegaProjekt.WebAPI.Controllers.v1.HomeController",
-    "Method": "Kupa",
-    "RelativePath": "api/home",
-    "HttpMethod": "POST",
+    "ContainingType": "MegaProjekt.WebAPI.Controllers.v1.AccountController",
+    "Method": "IsEmailAlreadyRegistered",
+    "RelativePath": "api",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MegaProjekt.WebAPI.Controllers.v1.HomeController",
-    "Method": "Fjut",
-    "RelativePath": "api/home",
+    "ContainingType": "MegaProjekt.WebAPI.Controllers.v1.AccountController",
+    "Method": "PostRegister",
+    "RelativePath": "api/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDTO",
+        "Type": "MegaProjekt.Core.DTO.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MegaProjekt.Core.Identity.ApplicationUser",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MegaProjekt.WebAPI.Controllers.v1.AccountController",
+    "Method": "Test",
+    "RelativePath": "api/test",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
