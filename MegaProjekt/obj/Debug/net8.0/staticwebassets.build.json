@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "b5Xm1/uY52k9L9FZfmAvY6e/NqdIHFZXuhbb2rQhYq4=",
-  "Source": "MegaProjekt",
-  "BasePath": "_content/MegaProjekt",
+  "Hash": "O6Jzmj5PZghQKkaBCgARwFvR/xNtJ2CJyuLuwk/88/U=",
+  "Source": "MegaProjekt.WebAPI",
+  "BasePath": "_content/MegaProjekt.WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

@@ -1,0 +1,13 @@
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\bin\Debug\net8.0\MegaProjekt.Core.deps.json
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\bin\Debug\net8.0\MegaProjekt.Core.dll
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\bin\Debug\net8.0\MegaProjekt.Core.pdb
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.AssemblyInfoInputs.cache
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.AssemblyInfo.cs
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.csproj.CoreCompileInputs.cache
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.sourcelink.json
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.dll
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\obj\Debug\net8.0\refint\MegaProjekt.Core.dll
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.pdb
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\obj\Debug\net8.0\ref\MegaProjekt.Core.dll
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.csproj.AssemblyReference.cache

@@ -129,3 +129,6 @@ C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt\o
 C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt\obj\Debug\net8.0\MegaProjekt.pdb
 C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt\obj\Debug\net8.0\MegaProjekt.genruntimeconfig.cache
 C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt\obj\Debug\net8.0\ref\MegaProjekt.dll
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt\bin\Debug\net8.0\MySqlConnector.dll
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt\obj\Debug\net8.0\MegaProjekt.sourcelink.json
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll

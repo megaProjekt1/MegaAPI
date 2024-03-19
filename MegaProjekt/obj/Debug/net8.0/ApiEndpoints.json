@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "MegaProjekt.WebAPI.Controllers.v1.HomeController",
+    "Method": "Kupa",
+    "RelativePath": "api/home",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MegaProjekt.WebAPI.Controllers.v1.HomeController",
+    "Method": "Fjut",
+    "RelativePath": "api/home",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

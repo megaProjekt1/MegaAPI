@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MegaProjekt.WebAPI.props" />
+</Project>
