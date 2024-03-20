@@ -1,9 +1,14 @@
-﻿using MegaProjekt.Core.DTO;
+﻿using MegaProject.Services;
+using MegaProject.Services.Services;
+using MegaProject.Services.Services.Interfaces;
+using MegaProjekt.Core.DTO;
 using MegaProjekt.Core.Identity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
 using System.Reflection.Metadata.Ecma335;
+using System.Text;
 
 namespace MegaProjekt.WebAPI.Controllers.v1
 {
@@ -15,12 +20,17 @@ namespace MegaProjekt.WebAPI.Controllers.v1
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<ApplicationRole> _roleManager;
+        private IMailService _mailService;
+        private IUserService _userService;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<ApplicationRole> roleManager)
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<ApplicationRole> roleManager,
+            IMailService mailService, IUserService userService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
+            _mailService = mailService;
+            _userService = userService;
         }
 
         [HttpPost("register")]
@@ -113,7 +123,22 @@ namespace MegaProjekt.WebAPI.Controllers.v1
         {
             await _signInManager.SignOutAsync();
 
+
             return NoContent();
+        }
+
+        [HttpPost("ForgetPassword")]
+        public async Task<IActionResult> ForgetPassword(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+                return NotFound();
+
+            var result = await _userService.ForgetPasswordAsync(email);
+
+            if (result.IsSuccess)
+                return Ok(result); // 200
+
+            return BadRequest(result); // 400
         }
     }
 }

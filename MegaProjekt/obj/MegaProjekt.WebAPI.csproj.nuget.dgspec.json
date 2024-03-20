@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt\\MegaProjekt.WebAPI.csproj": {}
+    "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt\\MegaProjekt.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Core\\MegaProjekt.Core.csproj": {
+    "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProject.Services\\MegaProject.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Core\\MegaProjekt.Core.csproj",
-        "projectName": "MegaProjekt.Core",
-        "projectPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Core\\MegaProjekt.Core.csproj",
-        "packagesPath": "C:\\Users\\Another\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Core\\obj\\",
+        "projectUniqueName": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProject.Services\\MegaProject.Services.csproj",
+        "projectName": "MegaProject.Services",
+        "projectPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProject.Services\\MegaProject.Services.csproj",
+        "packagesPath": "C:\\Users\\Krzysiek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProject.Services\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "F:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Another\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Krzysiek\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,79 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Core\\MegaProjekt.Core.csproj": {
+                "projectPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Core\\MegaProjekt.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Core\\MegaProjekt.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Core\\MegaProjekt.Core.csproj",
+        "projectName": "MegaProjekt.Core",
+        "projectPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Core\\MegaProjekt.Core.csproj",
+        "packagesPath": "C:\\Users\\Krzysiek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Krzysiek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,11 +107,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -57,6 +120,14 @@
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.2, )"
             }
           },
           "imports": [
@@ -75,25 +146,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj": {
+    "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj",
         "projectName": "MegaProjekt.Infrastructure",
-        "projectPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Another\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Krzysiek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "F:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Another\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Krzysiek\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,15 +168,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Core\\MegaProjekt.Core.csproj": {
-                "projectPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Core\\MegaProjekt.Core.csproj"
+              "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Core\\MegaProjekt.Core.csproj": {
+                "projectPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Core\\MegaProjekt.Core.csproj"
               }
             }
           }
@@ -118,11 +184,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -147,9 +208,17 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.2, )"
             }
           },
           "imports": [
@@ -168,25 +237,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt\\MegaProjekt.WebAPI.csproj": {
+    "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt\\MegaProjekt.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt\\MegaProjekt.WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt\\MegaProjekt.WebAPI.csproj",
         "projectName": "MegaProjekt.WebAPI",
-        "projectPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt\\MegaProjekt.WebAPI.csproj",
-        "packagesPath": "C:\\Users\\Another\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt\\obj\\",
+        "projectPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt\\MegaProjekt.WebAPI.csproj",
+        "packagesPath": "C:\\Users\\Krzysiek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "F:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Another\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Krzysiek\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -194,18 +259,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Core\\MegaProjekt.Core.csproj": {
-                "projectPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Core\\MegaProjekt.Core.csproj"
+              "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProject.Services\\MegaProject.Services.csproj": {
+                "projectPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProject.Services\\MegaProject.Services.csproj"
               },
-              "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj"
+              "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Core\\MegaProjekt.Core.csproj": {
+                "projectPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Core\\MegaProjekt.Core.csproj"
+              },
+              "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Krzysiek\\source\\repos\\Mega project\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj"
               }
             }
           }
@@ -214,11 +281,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -239,9 +301,17 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.2, )"
             }
           },
           "imports": [
@@ -263,7 +333,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
