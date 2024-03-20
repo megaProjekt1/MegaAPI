@@ -5,6 +5,5 @@ namespace MegaProjekt.Core.Identity
 {
     public class ApplicationUser : IdentityUser<Guid>
     {
-        //public string? PersonName { get; set; }
     }
 }

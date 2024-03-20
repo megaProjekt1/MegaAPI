@@ -27,7 +27,7 @@ namespace MegaProjekt.WebAPI.Controllers.v1
         public async Task<ActionResult<ApplicationUser>> PostRegister(RegisterDTO registerDTO)
         {
             //Validation
-            if(ModelState.IsValid == false)
+            if (ModelState.IsValid == false)
             {
                 string errorMessage = string.Join(" | ",
                     ModelState.Values.SelectMany(v => v.Errors).Select(e =>
@@ -62,11 +62,11 @@ namespace MegaProjekt.WebAPI.Controllers.v1
         }
 
         [HttpGet]
-        public async Task<IActionResult> IsEmailAlreadyRegistered (string email)
+        public async Task<IActionResult> IsEmailAlreadyRegistered(string email)
         {
             ApplicationUser user = await _userManager.FindByEmailAsync(email);
 
-            if(user == null)
+            if (user == null)
             {
                 return Ok(true);
             }
@@ -75,11 +75,45 @@ namespace MegaProjekt.WebAPI.Controllers.v1
                 return Ok(false);
             }
         }
-        [HttpGet("test")]
-        public async Task<IActionResult> Test()
+
+        [HttpPost("login")]
+        public async Task<ActionResult<ApplicationUser>> PostLogin(LoginDTO loginDTO)
         {
-            return Ok("kocham cyce");
+            if (ModelState.IsValid == false)
+            {
+                string errorMessage = string.Join(" | ",
+                    ModelState.Values.SelectMany(v => v.Errors).Select(e =>
+                    e.ErrorMessage));
+                return Problem(errorMessage);
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(loginDTO.Email, loginDTO.Password,
+                isPersistent: false, lockoutOnFailure: false);
+
+            if (result.Succeeded)
+            {
+                ApplicationUser? user = await _userManager.FindByNameAsync(loginDTO.Email);
+
+                if (user == null)
+                {
+                    return Problem();
+                }
+
+                return Ok(new { email = user.UserName });
+            }
+            else
+            {
+                return Problem("Invalid email or passowrd");
+            }
         }
 
+
+        [HttpGet("logout")]
+        public async Task<IActionResult> GetLogout()
+        {
+            await _signInManager.SignOutAsync();
+
+            return NoContent();
+        }
     }
 }
