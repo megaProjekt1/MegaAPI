@@ -1,5 +1,6 @@
-﻿using MegaProjekt.Core.Services;
-using MegaProjekt.Core.Services.Interfaces;
+﻿using MegaProject.Services;
+using MegaProject.Services.Services;
+using MegaProject.Services.Services.Interfaces;
 using MegaProjekt.Core.DTO;
 using MegaProjekt.Core.Identity;
 using Microsoft.AspNetCore.Http;
@@ -126,17 +127,18 @@ namespace MegaProjekt.WebAPI.Controllers.v1
             return NoContent();
         }
 
-        [HttpPost("remind-password")]
-        public async Task<IActionResult> ForgetPassword(ForgetPasswordDTO forgetPasswordDTO)
+        [HttpPost("ForgetPassword")]
+        public async Task<IActionResult> ForgetPassword(string email)
         {
-            if (string.IsNullOrEmpty(forgetPasswordDTO.Email))
+            if (string.IsNullOrEmpty(email))
                 return NotFound();
 
-            //var result = await _userService.ForgetPasswordAsync(forgetPasswordDTO.Email);
-            var toEmail = forgetPasswordDTO.Email;
-            await _userService.ForgetPasswordAsync(toEmail);
+            var result = await _userService.ForgetPasswordAsync(email);
 
-            return Ok();
+            if (result.IsSuccess)
+                return Ok(result); // 200
+
+            return BadRequest(result); // 400
         }
     }
 }

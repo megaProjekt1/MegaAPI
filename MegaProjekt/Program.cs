@@ -5,10 +5,8 @@ using Pomelo.EntityFrameworkCore.MySql;
 using MegaProjekt.Core.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using MegaProjekt.Core.Services;
-using MegaProjekt.Core.Services.Interfaces;
-using SendGrid.Helpers.Mail;
-
+using MegaProject.Services.Services;
+using MegaProject.Services.Services.Interfaces;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -44,11 +42,9 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     .AddUserStore<UserStore<ApplicationUser, ApplicationRole,
     ApplicationDbContext, Guid>>();
 
-builder.Services.Configure<MailSettings>
-   (options => builder.Configuration.GetSection("EmailSettings").Bind(options));
 
 builder.Services.AddScoped<IMailService,MailService>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserService,UserService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

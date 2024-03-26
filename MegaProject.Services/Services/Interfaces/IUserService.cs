@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MegaProjekt.Core.Services.Interfaces
+namespace MegaProject.Services.Services.Interfaces
 {
     public interface IUserService
     {

@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MegaProject.Services\MegaProject.Services.csproj" />
     <ProjectReference Include="..\MegaProjekt.Core\MegaProjekt.Core.csproj" />
     <ProjectReference Include="..\MegaProjekt.Infrastructure\MegaProjekt.Infrastructure.csproj" />
   </ItemGroup>
