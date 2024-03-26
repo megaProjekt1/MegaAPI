@@ -297,3 +297,5 @@ C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt\obj\Debug\net8.0\refint\
 C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt\obj\Debug\net8.0\MegaProjekt.WebAPI.pdb
 C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt\obj\Debug\net8.0\MegaProjekt.WebAPI.genruntimeconfig.cache
 C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt\obj\Debug\net8.0\ref\MegaProjekt.WebAPI.dll
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt\bin\Debug\net8.0\SendGrid.dll
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt\bin\Debug\net8.0\StarkbankEcdsa.dll

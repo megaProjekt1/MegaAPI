@@ -76,5 +76,21 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "MegaProjekt.WebAPI.Controllers.v1.AccountController",
+    "Method": "ForgetPassword",
+    "RelativePath": "api/remind-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "forgetPasswordDTO",
+        "Type": "MegaProjekt.Core.DTO.ForgetPasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

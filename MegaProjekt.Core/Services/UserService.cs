@@ -1,5 +1,6 @@
-﻿using MegaProject.Services.Services.Interfaces;
+﻿using MegaProjekt.Core.Services.Interfaces;
 using MegaProjekt.Core.Identity;
+using MegaProjekt.Core;
 using MegaProjekt.WebAPI;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
@@ -10,7 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MegaProject.Services.Services
+
+namespace MegaProjekt.Core.Services
 {
     public class UserService : IUserService
     {
@@ -26,7 +28,7 @@ namespace MegaProject.Services.Services
         }
         public async Task<UserManagerResponse> ForgetPasswordAsync(string email)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            var user = await _userManager.FindByNameAsync(email);
             if (user == null)
                 return new UserManagerResponse
                 {
@@ -38,7 +40,7 @@ namespace MegaProject.Services.Services
             var encodedToken = Encoding.UTF8.GetBytes(token);
             var validToken = WebEncoders.Base64UrlEncode(encodedToken);
 
-            string url = $"{_configuration["AppUrl"]}/ResetPassword?email={email}&token={validToken}";
+            string url = $"{_configuration["AppUrl"]}/RestetPassword?email={email}&token={validToken}";
 
             await _mailService.SendEmailAsync(email, "Reset Password", "<h1>Follow the instructions to reset your password</h1>" +
                 $"<p>To reset your password <a href='{url}'>Click here</a></p>");

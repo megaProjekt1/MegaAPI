@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v8.0": {
       "MegaProjekt.WebAPI/1.0.0": {
         "dependencies": {
-          "MegaProject.Services": "1.0.0",
           "MegaProjekt.Core": "1.0.0",
           "MegaProjekt.Infrastructure": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.3",
@@ -1844,17 +1843,6 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "MegaProject.Services/1.0.0": {
-        "dependencies": {
-          "MegaProjekt.Core": "1.0.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.3",
-          "Microsoft.Extensions.Configuration": "8.0.0",
-          "SendGrid": "9.29.2"
-        },
-        "runtime": {
-          "MegaProject.Services.dll": {}
-        }
-      },
       "MegaProjekt.Core/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.3",
@@ -3217,11 +3205,6 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
-    },
-    "MegaProject.Services/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "MegaProjekt.Core/1.0.0": {
       "type": "project",

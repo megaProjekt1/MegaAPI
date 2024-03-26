@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MegaProject.Services.Services.Interfaces
+namespace MegaProjekt.Core.Services.Interfaces
 {
     public interface IMailService
     {
-        Task SendEmailAsync(string toEmail, string subject, string content);
+        public Task SendEmailAsync(string toEmail, string subject, string message);
     }
 }
