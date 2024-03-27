@@ -45,6 +45,10 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 
 builder.Services.AddScoped<IMailService,MailService>();
 builder.Services.AddScoped<IUserService,UserService>();
+
+builder.Services.Configure<DataProtectionTokenProviderOptions>(opt =>
+   opt.TokenLifespan = TimeSpan.FromHours(2));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -86,8 +86,24 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "forgetPasswordDTO",
-        "Type": "MegaProjekt.Core.DTO.ForgetPasswordDTO",
+        "Name": "remindPassword",
+        "Type": "MegaProjekt.Core.DTO.RemindPasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MegaProjekt.WebAPI.Controllers.v1.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/ResetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPasswordDTO",
+        "Type": "MegaProjekt.Core.DTO.ResetPasswordDTO",
         "IsRequired": true
       }
     ],

@@ -105,12 +105,12 @@ namespace MegaProjekt.WebAPI.Controllers.v1
         }
 
         [HttpPost("remind-password")]
-        public async Task<IActionResult> ForgetPassword(string email)
+        public async Task<IActionResult> ForgetPassword(RemindPasswordDTO remindPassword)
         {
-            if (string.IsNullOrEmpty(email))
+            if (string.IsNullOrEmpty(remindPassword.Email))
                 return NotFound();
 
-            var result = await _userService.ForgetPasswordAsync(email);
+            var result = await _userService.ForgetPasswordAsync(remindPassword.Email);
 
             if (result.IsSuccess)
                 return Ok(result); // 200
@@ -119,7 +119,7 @@ namespace MegaProjekt.WebAPI.Controllers.v1
         }
 
         [HttpPost("ResetPassword")]
-        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDTO resetPasswordDTO)
+        public async Task<IActionResult> ResetPassword(ResetPasswordDTO resetPasswordDTO)
         {
             var result = await _userService.ResetPassword(resetPasswordDTO);
 

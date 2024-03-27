@@ -22,8 +22,8 @@ namespace MegaProject.Core.Services
         {
             var apiKey = _configuration["SendGridAPIKey"];
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress(_configuration["HostEmail"]);
-            var to = new EmailAddress(toEmail);
+            var from = new EmailAddress(_configuration["HostEmail"], "noreply");
+            var to = new EmailAddress(toEmail, "Example User");
             var msg = MailHelper.CreateSingleEmail(from, to, subject, content, content);
             var response = await client.SendEmailAsync(msg);
         }

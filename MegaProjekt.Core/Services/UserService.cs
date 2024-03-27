@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
+using System.Security.Policy;
 using System.Text;
 
 namespace MegaProject.Core.Services
@@ -26,7 +27,7 @@ namespace MegaProject.Core.Services
         }
         public async Task<UserManagerResponse> ForgetPasswordAsync(string email)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            var user = await _userManager.FindByNameAsync(email);
             if (user == null)
                 return new UserManagerResponse
                 {
@@ -38,10 +39,11 @@ namespace MegaProject.Core.Services
             var encodedToken = Encoding.UTF8.GetBytes(code);
             var validToken = WebEncoders.Base64UrlEncode(encodedToken);
 
-            var link = $"{_configuration["AppUrl"]}/change-password?email={user.Email}&activationToken={validToken}";
+            var link = $"{_configuration["AppUrl"]}/change-password?email={user.UserName}&activationToken={validToken}";
             var emailContent = "Your email content that contains the above link";
 
-            await _mailService.SendEmailAsync(user.Email, "Password Reset", emailContent);
+            await _mailService.SendEmailAsync(email, "Reset Password", "<h1>Follow the instructions to reset your password</h1>" +
+                $"<p>To reset your password <a href='{link}'>Click here</a></p>");
 
             return new UserManagerResponse
             {
@@ -54,10 +56,10 @@ namespace MegaProject.Core.Services
         {  
 
 
-            var user = await _userManager.FindByEmailAsync(resetPasswordDTO.Email);
+            var user = await _userManager.FindByNameAsync(resetPasswordDTO.Email);
 
             var decodedToken = WebEncoders.Base64UrlDecode(resetPasswordDTO.ResetPasswordToken);
-            var validToken = decodedToken.ToString();
+            var validToken = Encoding.UTF8.GetString(decodedToken, 0, decodedToken.Length);
 
 
             if (user != null)
@@ -68,7 +70,7 @@ namespace MegaProject.Core.Services
                 {
                     var emailContent = $"Your password is reset now";
 
-                    await _mailService.SendEmailAsync(user.Email, "Password Reset Complete", emailContent);
+                    await _mailService.SendEmailAsync(user.UserName, "Password Reset Complete", emailContent);
 
                     return true;
                 }
