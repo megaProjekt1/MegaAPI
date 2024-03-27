@@ -33,3 +33,21 @@ C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt.Infrastructure\obj\Debug
 C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.pdb
 C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.genruntimeconfig.cache
 C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt.Infrastructure\obj\Debug\net8.0\ref\MegaProjekt.Infrastructure.dll
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\bin\Debug\net8.0\MegaProjekt.Infrastructure.deps.json
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\bin\Debug\net8.0\MegaProjekt.Infrastructure.runtimeconfig.json
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\bin\Debug\net8.0\MegaProjekt.Infrastructure.dll
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\bin\Debug\net8.0\MegaProjekt.Infrastructure.pdb
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\bin\Debug\net8.0\MegaProjekt.Core.dll
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\bin\Debug\net8.0\MegaProjekt.Core.pdb
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.AssemblyInfo.cs
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.sourcelink.json
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProj.F1D9D6C0.Up2Date
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.dll
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\refint\MegaProjekt.Infrastructure.dll
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.pdb
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\MegaProjekt.Infrastructure.genruntimeconfig.cache
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Infrastructure\obj\Debug\net8.0\ref\MegaProjekt.Infrastructure.dll

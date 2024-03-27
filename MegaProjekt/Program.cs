@@ -5,8 +5,8 @@ using Pomelo.EntityFrameworkCore.MySql;
 using MegaProjekt.Core.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using MegaProject.Services.Services;
-using MegaProject.Services.Services.Interfaces;
+using MegaProject.Core.Services;
+using MegaProject.Core.Services.ServiceContracts;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 

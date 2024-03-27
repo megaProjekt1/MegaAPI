@@ -1,4 +1,4 @@
-﻿using MegaProject.Services.Services.Interfaces;
+﻿using MegaProject.Core.Services.ServiceContracts;
 using Microsoft.Extensions.Configuration;
 using SendGrid;
 using SendGrid.Helpers.Mail;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MegaProject.Services.Services
+namespace MegaProject.Core.Services
 {
     public class MailService : IMailService
     {
@@ -22,7 +22,7 @@ namespace MegaProject.Services.Services
         {
             var apiKey = _configuration["SendGridAPIKey"];
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("test@authdemo.com", "JWT Auth Demo");
+            var from = new EmailAddress(_configuration["HostEmail"]);
             var to = new EmailAddress(toEmail);
             var msg = MailHelper.CreateSingleEmail(from, to, subject, content, content);
             var response = await client.SendEmailAsync(msg);

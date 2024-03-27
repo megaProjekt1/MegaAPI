@@ -23,3 +23,16 @@ C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt.Core\obj\Debug\net8.0\Me
 C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt.Core\obj\Debug\net8.0\refint\MegaProjekt.Core.dll
 C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.pdb
 C:\Users\Krzysiek\source\repos\Mega project\MegaProjekt.Core\obj\Debug\net8.0\ref\MegaProjekt.Core.dll
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\bin\Debug\net8.0\MegaProjekt.Core.deps.json
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\bin\Debug\net8.0\MegaProjekt.Core.dll
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\bin\Debug\net8.0\MegaProjekt.Core.pdb
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.csproj.AssemblyReference.cache
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.AssemblyInfoInputs.cache
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.AssemblyInfo.cs
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.csproj.CoreCompileInputs.cache
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.sourcelink.json
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.dll
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\obj\Debug\net8.0\refint\MegaProjekt.Core.dll
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\obj\Debug\net8.0\MegaProjekt.Core.pdb
+C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt.Core\obj\Debug\net8.0\ref\MegaProjekt.Core.dll
