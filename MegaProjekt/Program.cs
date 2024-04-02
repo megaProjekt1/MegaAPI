@@ -5,8 +5,8 @@ using Pomelo.EntityFrameworkCore.MySql;
 using MegaProjekt.Core.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using MegaProject.Core.Services;
-using MegaProject.Core.Services.ServiceContracts;
+using MegaProjekt.Core.Services.ServiceContracts;
+using MegaProjekt.Core.Services;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -42,9 +42,11 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     .AddUserStore<UserStore<ApplicationUser, ApplicationRole,
     ApplicationDbContext, Guid>>();
 
+builder.Services.AddTransient<IJwtService, JwtService>();
 
-builder.Services.AddScoped<IMailService,MailService>();
-builder.Services.AddScoped<IUserService,UserService>();
+
+builder.Services.AddScoped<IMailService, MailService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.Configure<DataProtectionTokenProviderOptions>(opt =>
    opt.TokenLifespan = TimeSpan.FromHours(2));
