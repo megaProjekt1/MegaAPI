@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "5zjU4Rtg9zLeqqAOWM7LCuLK1N7Nu0QQaCZVYS+q1l7yib8vuFytV9fpGaoSqBBz6Y35UtMAIQU1bfaywHZ1lQ==",
-=======
   "dgSpecHash": "K2NLiVtOaZXWz9QYOyCV8hn0ScPauDbmZz5+Ho8KWWdU6DrYO5ugZOOxtZRp/Tu9fVESRIb8s57g6Expdaz7bA==",
->>>>>>> 4624d37d5d58ec91ab4df837e793d785a68de6ae
   "success": true,
   "projectFilePath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt\\MegaProjekt.WebAPI.csproj",
   "expectedPackageFiles": [
@@ -202,5 +198,12 @@
     "C:\\Users\\Another\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Another\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

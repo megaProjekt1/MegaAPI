@@ -3554,22 +3554,6 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "MegaProject.Services/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "MegaProjekt.Core": "1.0.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.3",
-          "Microsoft.Extensions.Configuration": "8.0.0",
-          "SendGrid": "9.29.2"
-        },
-        "compile": {
-          "bin/placeholder/MegaProject.Services.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MegaProject.Services.dll": {}
-        }
-      },
       "MegaProjekt.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -10113,11 +10097,6 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "MegaProject.Services/1.0.0": {
-      "type": "project",
-      "path": "../MegaProject.Services/MegaProject.Services.csproj",
-      "msbuildProject": "../MegaProject.Services/MegaProject.Services.csproj"
-    },
     "MegaProjekt.Core/1.0.0": {
       "type": "project",
       "path": "../MegaProjekt.Core/MegaProjekt.Core.csproj",
@@ -10131,7 +10110,6 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "MegaProject.Services >= 1.0.0",
       "MegaProjekt.Core >= 1.0.0",
       "MegaProjekt.Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.3",
@@ -10175,9 +10153,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProject.Services\\MegaProject.Services.csproj": {
-              "projectPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProject.Services\\MegaProject.Services.csproj"
-            },
             "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Core\\MegaProjekt.Core.csproj": {
               "projectPath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Core\\MegaProjekt.Core.csproj"
             },
@@ -10251,5 +10226,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
