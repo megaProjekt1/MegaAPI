@@ -1,4 +1,4 @@
-﻿namespace MegaProjekt.WebAPI
+﻿namespace MegaProjekt.Core
 {
     public class UserManagerResponse
     {

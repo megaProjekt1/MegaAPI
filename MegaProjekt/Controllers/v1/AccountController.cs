@@ -1,14 +1,14 @@
-﻿using MegaProject.Services;
-using MegaProject.Services.Services;
-using MegaProject.Services.Services.Interfaces;
+﻿using MegaProject.Core;
 using MegaProjekt.Core.DTO;
 using MegaProjekt.Core.Identity;
+using MegaProject.Core.Services.ServiceContracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MegaProjekt.WebAPI.Controllers.v1
 {
@@ -45,29 +45,15 @@ namespace MegaProjekt.WebAPI.Controllers.v1
                 return Problem(errorMessage);
             }
 
-            //Create User
-            ApplicationUser user = new ApplicationUser()
+            var registerResult = await _userService.RegisterAsync(registerDTO);
+
+            if (registerResult.IsSuccess)
             {
-                //Email = registerDTO.Email,
-                //PhoneNumber = registerDTO.PhoneNumber,
-                UserName = registerDTO.Email
-                //PersonName = registerDTO.PersonName
-            };
-
-            IdentityResult result = await _userManager.CreateAsync(user, registerDTO.Password);
-
-            if (result.Succeeded)
-            {
-                await _signInManager.SignInAsync(user, isPersistent: false);
-
-                return Ok(user);
+                return Ok(registerResult.Message);
             }
             else
             {
-                string errorMessage = string.Join(" | ",
-                    result.Errors.Select(e => e.Description));
-
-                return Problem(errorMessage);
+                return Problem(registerResult.Message);
             }
         }
 
@@ -97,23 +83,15 @@ namespace MegaProjekt.WebAPI.Controllers.v1
                 return Problem(errorMessage);
             }
 
-            var result = await _signInManager.PasswordSignInAsync(loginDTO.Email, loginDTO.Password,
-                isPersistent: false, lockoutOnFailure: false);
+            var loginResult = await _userService.LoginAsync(loginDTO);
 
-            if (result.Succeeded)
+            if (loginResult.IsSuccess)
             {
-                ApplicationUser? user = await _userManager.FindByNameAsync(loginDTO.Email);
-
-                if (user == null)
-                {
-                    return Problem();
-                }
-
-                return Ok(new { email = user.UserName });
+                return Ok(new { email = loginResult.Message });
             }
             else
             {
-                return Problem("Invalid email or passowrd");
+                return Problem(loginResult.Message);
             }
         }
 
@@ -123,22 +101,34 @@ namespace MegaProjekt.WebAPI.Controllers.v1
         {
             await _signInManager.SignOutAsync();
 
-
             return NoContent();
         }
 
-        [HttpPost("ForgetPassword")]
-        public async Task<IActionResult> ForgetPassword(string email)
+        [HttpPost("remind-password")]
+        public async Task<IActionResult> ForgetPassword(RemindPasswordDTO remindPassword)
         {
-            if (string.IsNullOrEmpty(email))
+            if (string.IsNullOrEmpty(remindPassword.Email))
                 return NotFound();
 
-            var result = await _userService.ForgetPasswordAsync(email);
+            var result = await _userService.ForgetPasswordAsync(remindPassword.Email);
 
             if (result.IsSuccess)
                 return Ok(result); // 200
 
             return BadRequest(result); // 400
+        }
+
+        [HttpPost("ResetPassword")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordDTO resetPasswordDTO)
+        {
+            var result = await _userService.ResetPassword(resetPasswordDTO);
+
+            if (!result)
+            {
+                return StatusCode(500, "nie dziala");
+            }
+
+            return Ok();
         }
     }
 }

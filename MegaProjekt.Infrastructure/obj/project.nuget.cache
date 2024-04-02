@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "a/KMGyYIsA1I2RrHnCV0EfTZcYPkjQBCmdhEfd7v2QF6C++mrdIe6UHDdUYWYCpX+kvTxI5BUL5ApYhOINHcoA==",
+=======
+  "dgSpecHash": "S/8ATnVLpOGoUA4nUC+PEUURv/vbeZadNMqSH8iRKXkjIOEx67kWM7jW2xU8pOUu4l+UlsDf2t/JDPVT6E56aQ==",
+>>>>>>> 4624d37d5d58ec91ab4df837e793d785a68de6ae
   "success": true,
   "projectFilePath": "C:\\Users\\Another\\Desktop\\Programming\\Poważne projekty\\MegaProjekt\\MegaProjekt.Infrastructure\\MegaProjekt.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -8,7 +12,13 @@
     "C:\\Users\\Another\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Another\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
+=======
+    "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
+    "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
+>>>>>>> 4624d37d5d58ec91ab4df837e793d785a68de6ae
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
@@ -24,6 +34,10 @@
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+<<<<<<< HEAD
+=======
+    "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.identity\\2.2.0\\microsoft.aspnetcore.identity.2.2.0.nupkg.sha512",
+>>>>>>> 4624d37d5d58ec91ab4df837e793d785a68de6ae
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\8.0.3\\microsoft.aspnetcore.identity.entityframeworkcore.8.0.3.nupkg.sha512",
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\2.2.0\\microsoft.aspnetcore.jsonpatch.2.2.0.nupkg.sha512",
     "C:\\Users\\Another\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",

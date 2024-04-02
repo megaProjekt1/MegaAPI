@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MegaProject.Services.Services.Interfaces
+namespace MegaProject.Core.Services.ServiceContracts
 {
     public interface IMailService
     {

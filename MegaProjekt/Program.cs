@@ -5,8 +5,8 @@ using Pomelo.EntityFrameworkCore.MySql;
 using MegaProjekt.Core.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using MegaProject.Services.Services;
-using MegaProject.Services.Services.Interfaces;
+using MegaProject.Core.Services;
+using MegaProject.Core.Services.ServiceContracts;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -45,6 +45,10 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 
 builder.Services.AddScoped<IMailService,MailService>();
 builder.Services.AddScoped<IUserService,UserService>();
+
+builder.Services.Configure<DataProtectionTokenProviderOptions>(opt =>
+   opt.TokenLifespan = TimeSpan.FromHours(2));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
