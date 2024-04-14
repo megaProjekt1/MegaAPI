@@ -1,7 +1,7 @@
-﻿using MegaProject.Core;
-using MegaProjekt.Core.DTO;
+﻿using MegaProjekt.Core.DTO;
 using MegaProjekt.Core.Identity;
-using MegaProject.Core.Services.ServiceContracts;
+using MegaProjekt.Core.Services.ServiceContracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +12,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MegaProjekt.WebAPI.Controllers.v1
 {
+    [AllowAnonymous]
     [ApiController]
     [Route("api/")]
 
@@ -22,15 +23,17 @@ namespace MegaProjekt.WebAPI.Controllers.v1
         private readonly RoleManager<ApplicationRole> _roleManager;
         private IMailService _mailService;
         private IUserService _userService;
+        private readonly IJwtService _jwtService;
 
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<ApplicationRole> roleManager,
-            IMailService mailService, IUserService userService)
+            IMailService mailService, IUserService userService, IJwtService jwtService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _mailService = mailService;
             _userService = userService;
+            _jwtService = jwtService;
         }
 
         [HttpPost("register")]
@@ -49,7 +52,7 @@ namespace MegaProjekt.WebAPI.Controllers.v1
 
             if (registerResult.IsSuccess)
             {
-                return Ok(registerResult.Message);
+                return Ok(registerResult.AuthenticationResponse);
             }
             else
             {
@@ -87,14 +90,13 @@ namespace MegaProjekt.WebAPI.Controllers.v1
 
             if (loginResult.IsSuccess)
             {
-                return Ok(new { email = loginResult.Message });
+                return Ok(loginResult.AuthenticationResponse);
             }
             else
             {
                 return Problem(loginResult.Message);
             }
         }
-
 
         [HttpGet("logout")]
         public async Task<IActionResult> GetLogout()

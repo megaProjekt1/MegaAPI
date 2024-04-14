@@ -1,5 +1,5 @@
-﻿using MegaProject.Core.Services.ServiceContracts;
-using MegaProjekt.Core;
+﻿using MegaProjekt.Core.Services.ServiceContracts;
+using MegaProjekt.Core.Entities;
 using MegaProjekt.Core.DTO;
 using MegaProjekt.Core.Identity;
 using Microsoft.AspNetCore.Identity;
@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 using System.Security.Policy;
 using System.Text;
 
-namespace MegaProject.Core.Services
+namespace MegaProjekt.Core.Services
 {
     public class UserService : IUserService
     {
@@ -18,12 +18,14 @@ namespace MegaProject.Core.Services
         private readonly SignInManager<ApplicationUser> _signInManager;
         private IConfiguration _configuration;
         private IMailService _mailService;
-        public UserService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration, IMailService mailService)
+        private readonly IJwtService _jwtService;
+        public UserService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration, IMailService mailService, IJwtService jwtService)
         {
             _userManager = userManager;
             _configuration = configuration;
             _signInManager = signInManager;
             _mailService = mailService;
+            _jwtService = jwtService;
         }
         public async Task<UserManagerResponse> ForgetPasswordAsync(string email)
         {
@@ -96,10 +98,16 @@ namespace MegaProject.Core.Services
                     };
                 }
 
+                var authenticationResponse = _jwtService.CreateJwtToken(user);
+                user.RefreshToken = authenticationResponse.RefreshToken;
+                user.RefreshTokenExpirationDateTime = authenticationResponse.RefreshTokenExpirationDateTime;
+                await _userManager.UpdateAsync(user);
+
                 return new UserManagerResponse
                 {
                     IsSuccess = true,
-                    Message = "Logged successfully"
+                    Message = "Logged successfully",
+                    AuthenticationResponse = authenticationResponse
                 };
             }
             else
@@ -126,10 +134,18 @@ namespace MegaProject.Core.Services
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
+
+                var authenticationResponse = _jwtService.CreateJwtToken(user);
+
+                user.RefreshToken = authenticationResponse.RefreshToken;
+                user.RefreshTokenExpirationDateTime = authenticationResponse.RefreshTokenExpirationDateTime;
+                await _userManager.UpdateAsync(user);
+
                 return new UserManagerResponse
                 {
                     IsSuccess = true,
-                    Message = "User created successfully"
+                    Message = "User created successfully",
+                    AuthenticationResponse = authenticationResponse
                 };
             }
             else

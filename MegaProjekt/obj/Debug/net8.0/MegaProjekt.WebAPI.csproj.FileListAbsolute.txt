@@ -449,3 +449,4 @@ C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt\obj\Debug\net8.0\refint\MegaProje
 C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt\obj\Debug\net8.0\MegaProjekt.WebAPI.pdb
 C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt\obj\Debug\net8.0\MegaProjekt.WebAPI.genruntimeconfig.cache
 C:\Users\g.IT\source\repos\MegaAPI\MegaProjekt\obj\Debug\net8.0\ref\MegaProjekt.WebAPI.dll
+C:\Users\Another\Desktop\Programming\Poważne projekty\MegaProjekt\MegaProjekt\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

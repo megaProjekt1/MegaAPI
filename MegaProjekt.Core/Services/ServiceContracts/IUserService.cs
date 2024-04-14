@@ -1,4 +1,4 @@
-﻿using MegaProjekt.Core;
+﻿using MegaProjekt.Core.Entities;
 using MegaProjekt.Core.DTO;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MegaProject.Core.Services.ServiceContracts
+namespace MegaProjekt.Core.Services.ServiceContracts
 {
     public interface IUserService
     {

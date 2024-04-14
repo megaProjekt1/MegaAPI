@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MegaProjekt.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3f5ee45db87cfa963ff6f131ad61b71dce2c176")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d81ee2243e10c3ec566cd5e656e55b4cb3e42206")]
 [assembly: System.Reflection.AssemblyProductAttribute("MegaProjekt.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MegaProjekt.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

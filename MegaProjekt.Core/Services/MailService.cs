@@ -1,4 +1,4 @@
-﻿using MegaProject.Core.Services.ServiceContracts;
+﻿using MegaProjekt.Core.Services.ServiceContracts;
 using Microsoft.Extensions.Configuration;
 using SendGrid;
 using SendGrid.Helpers.Mail;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MegaProject.Core.Services
+namespace MegaProjekt.Core.Services
 {
     public class MailService : IMailService
     {
