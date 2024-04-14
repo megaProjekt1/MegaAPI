@@ -99,6 +99,9 @@ namespace MegaProjekt.Core.Services
                 }
 
                 var authenticationResponse = _jwtService.CreateJwtToken(user);
+                user.RefreshToken = authenticationResponse.RefreshToken;
+                user.RefreshTokenExpirationDateTime = authenticationResponse.RefreshTokenExpirationDateTime;
+                await _userManager.UpdateAsync(user);
 
                 return new UserManagerResponse
                 {
@@ -133,6 +136,10 @@ namespace MegaProjekt.Core.Services
                 await _signInManager.SignInAsync(user, isPersistent: false);
 
                 var authenticationResponse = _jwtService.CreateJwtToken(user);
+
+                user.RefreshToken = authenticationResponse.RefreshToken;
+                user.RefreshTokenExpirationDateTime = authenticationResponse.RefreshTokenExpirationDateTime;
+                await _userManager.UpdateAsync(user);
 
                 return new UserManagerResponse
                 {

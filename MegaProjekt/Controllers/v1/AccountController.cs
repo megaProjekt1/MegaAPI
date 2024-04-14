@@ -1,6 +1,7 @@
 ﻿using MegaProjekt.Core.DTO;
 using MegaProjekt.Core.Identity;
 using MegaProjekt.Core.Services.ServiceContracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MegaProjekt.WebAPI.Controllers.v1
 {
+    [AllowAnonymous]
     [ApiController]
     [Route("api/")]
 
@@ -95,7 +97,6 @@ namespace MegaProjekt.WebAPI.Controllers.v1
                 return Problem(loginResult.Message);
             }
         }
-
 
         [HttpGet("logout")]
         public async Task<IActionResult> GetLogout()
