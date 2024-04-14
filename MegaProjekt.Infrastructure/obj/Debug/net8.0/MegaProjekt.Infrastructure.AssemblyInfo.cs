@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MegaProjekt.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b34d2b647ea20b235868a814a99a2c402088bbf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d81ee2243e10c3ec566cd5e656e55b4cb3e42206")]
 [assembly: System.Reflection.AssemblyProductAttribute("MegaProjekt.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MegaProjekt.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
