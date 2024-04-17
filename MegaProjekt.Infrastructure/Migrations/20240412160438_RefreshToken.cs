@@ -11,7 +11,7 @@ namespace MegaProjekt.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.RenameColumn(
-                name: "PersonName",
+                name: "UserName",
                 table: "AspNetUsers",
                 newName: "RefreshToken");
         }
@@ -22,7 +22,7 @@ namespace MegaProjekt.Infrastructure.Migrations
             migrationBuilder.RenameColumn(
                 name: "RefreshToken",
                 table: "AspNetUsers",
-                newName: "PersonName");
+                newName: "UserName");
         }
     }
 }

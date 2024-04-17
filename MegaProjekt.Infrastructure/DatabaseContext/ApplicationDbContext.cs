@@ -1,6 +1,7 @@
 ﻿using MegaProjekt.Core.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using MegaProjekt.Core.DTO;
 
 
 namespace MegaProjekt.Infrastructure.DatabaseContext
@@ -15,7 +16,7 @@ namespace MegaProjekt.Infrastructure.DatabaseContext
         }
 
 
-        
+        public DbSet<PostDTO> PostDTOs { get; set; }
 
     }
 }
